@@ -1,0 +1,16 @@
+[
+    {
+    
+    "serviceTitle": "Engine Servicing",
+    "imageUpload": "https://i.ibb.co/5vhPVY5/car-cleaning.jpg",
+    "price": "450",
+    "textArea": "engineering service is good"
+    },
+    {
+    
+    "serviceTitle": "car parse",
+    "imageUpload": "https://i.ibb.co/JxD9dNX/car-engine.png",
+    "price": "1500",
+    "textArea": "car parse so useful"
+    }
+    ]

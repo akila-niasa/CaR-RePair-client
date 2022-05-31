@@ -1,0 +1,29 @@
+.footer-area{
+    background-color: #0b2154;
+ }
+ .social-media .icon{
+     height: 40px;
+     width: 40px;
+     color: #ffffff;
+     border-radius: 50%;
+     border: 1px solid #d81324;
+     padding: 10px;
+ }
+ .social-media :hover{
+     color: #d81324;
+     transition: .5s;
+ }
+ 
+ .address-btn{
+     font-family: 'Lato', sans-serif;
+     font-weight: 400;
+     text-transform: capitalize;
+     font-weight:600;
+     color: #ffffff;
+     background-color: #d81324;
+     width: 200px;
+     height: 40px;
+     border-color: transparent;
+     border-radius: 25px;
+   
+   }
