@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           </div>
         <div className="copyRight text-center bg-danger py-1">
-                <p className="text-white">Copyright <span>&#169;</span> {(new Date()).getFullYear()} All Rights Reserved Faysal Khan</p>
+                <p className="text-white">Copyright <span>&#169;</span> {(new Date()).getFullYear()} All Rights Reserved Akila</p>
             </div>
     </footer>
     );

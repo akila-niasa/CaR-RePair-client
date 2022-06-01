@@ -32,9 +32,13 @@ const Navbar = () => {
                 <li class="nav-item">
                     <Link class="nav-link ms-4" to="/home">Reviews</Link>
                 </li> */}
-                <li class="nav-item">
+                {
+                    user && <>
+                    <li class="nav-item">
                     <Link class="nav-link ms-4" to="/dashboard">Dashboard</Link>
                 </li>
+                    </>
+                }
                 <li>
                 {/* <Link to='/login' className='nav-link active login-text-color text-center'>
                                         Login
