@@ -8,6 +8,7 @@ import PayPal from '../../../Images/paypal.png'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
+import Payment from '../Payment/Payment';
 
 
 const OrderProcess = () => {
@@ -75,23 +76,9 @@ const OrderProcess = () => {
                         </form> 
                     </div>
                     <div>
-                        <p className="tex-danger pt-4">Pay with</p>
-                        <div className="d-flex pb-4">
-                            <div class="form-check d-flex  px-3">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />&nbsp;&nbsp;
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    <img className="img-fluid" style={{width:"30px", height:"30px"}} src={CreditCard} alt=""/>
-                                </label>
-                            </div>
-                            <div class="form-check d-flex">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />&nbsp;&nbsp;
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                <img className="img-fluid" style={{width:"30px", height:"30px"}} src={PayPal} alt=""/>
-                                </label> &nbsp; &nbsp;
-                            </div>
-                            <p>Your Service Charge Will be ${product.price}</p>
-                        </div>
-                     <Toaster/>
+                        <p className="tex-danger pt-4">Payment</p>
+                       
+                   <Payment/>
                     </div>
                 </div>
             </div>

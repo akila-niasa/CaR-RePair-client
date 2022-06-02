@@ -12,7 +12,7 @@ const ProductDetails = ({service}) => {
         padding: '10px',
         fontSize: '15px',
         cursor: 'pointer',
-        width: '30%',
+        width: '50%',
        
       }
     return (

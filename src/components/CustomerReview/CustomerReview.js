@@ -14,8 +14,8 @@ const CustomerReview = () => {
         <div className="container ">  
            <div className="mb-5">
                 <div className="col-md-12 text-center">
-                    <p className="brand-txt text-capitalize">our testimonial</p>
-                    <h4 className="brand-heading text-capitalize">client reviews</h4>
+                    <p className="fs-4">our testimonial</p>
+                    <h2 className="brand-heading text-danger fw-bold">client reviews</h2>
                 </div>
            </div>
             <div className="row">

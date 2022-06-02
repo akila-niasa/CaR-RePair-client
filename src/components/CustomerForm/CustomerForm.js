@@ -11,8 +11,8 @@ const CustomerForm = () => {
          <div className="container">
              <div className="row">
                  <div className="col-md-12 text-center">
-                 <p className="brand-txt text-capitalize">Put information</p>
-                    <h4 className="brand-heading text-capitalize">Booking for repair</h4>
+                 <p className='fs-4 fw-bolder'>Put information</p>
+                    <h4 className='fs-2 fw-bolder'>Booking <span className='text-danger'>for repair</span></h4>
                  </div>
              </div>
          <div className="row ">

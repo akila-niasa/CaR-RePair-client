@@ -3,10 +3,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './SideBar.css'
-import { FaFolderPlus,FaUserCircle,FaCartPlus,FaListUl,FaCommentDots,FaHome } from "react-icons/fa";
+import { FaFolderPlus,FaUserCircle,FaPlus,FaCartPlus,FaListUl,FaThLarge,FaCommentDots,FaHome,FaUserCog } from "react-icons/fa";
+import useAdmin from '../../../hooks/useAdmin';
 
 const SideBar = () => {
     const[user]=useAuthState(auth)
+    const [adminData]=useAdmin(user)
     return (
         <section className="sidebar-section">
         <div className="container">
@@ -31,56 +33,45 @@ const SideBar = () => {
             </div>
             <div className="sidebar-menu">
               <ul>
-                <li>
-                  <Link to="/dashboard">
+              <li>
+                  <Link to="/dashboard/profile">
                     <FaUserCircle
                     />
                     &nbsp;&nbsp;<span>Profile</span>
                   </Link>
                 </li>
-                {/* {adminData && (
+                {adminData && (
                   <>
                     <li>
-                      <Link className="active" to="/orderlist">
-                        <FontAwesomeIcon
-                          icon={faListUl}
-                          className="fa fa-order-list"
+                      <Link className="active" to="/dashboard/orderlist">
+                        <FaListUl
                         />
                         &nbsp;&nbsp;<span>Order List</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/addservices">
-                        <FontAwesomeIcon
-                          icon={faPlus}
-                          className="fa fa-add-service"
-                          color="#d81324"
+                      <Link to="/dashboard/addservices">
+                        <FaPlus
                         />
                         &nbsp;&nbsp;<span>Add Service</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/makeadmin">
-                        <FontAwesomeIcon
-                          icon={faUserCog}
-                          className="fa fa-make-admin"
-                          color="#d81324"
+                      <Link to="/dashboard/admin">
+                        <FaUserCog
                         />
                         &nbsp;&nbsp;<span>Make Admin</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/manageservice">
-                        <FontAwesomeIcon
-                          icon={faThLarge}
-                          className="fa fa-manage-service"
-                          color="#d81324"
+                      <Link to="/dashboard/manageservice">
+                        <FaThLarge
                         />
                         &nbsp;&nbsp;<span>Manage Service</span>
                       </Link>
                     </li>
                   </>
-                )} */}
+                )}
                 {/* <li>
                   <Link to="/order/:id">
                     <FaCartPlus
@@ -88,21 +79,27 @@ const SideBar = () => {
                     &nbsp;&nbsp;<span>Order</span>
                   </Link>
                 </li> */}
+                {
+                  (user&&!adminData) && <>
+                    
                 <li>
-                  <Link to="/customerorder">
+                  <Link to="/dashboard/customerorder">
                     <FaListUl
                     />
                     &nbsp;&nbsp;<span>Order List</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/review">
+                  <Link to="/dashboard/review">
                     <FaCommentDots
                     />
                     &nbsp;&nbsp;<span>Review</span>
                   </Link>
                 </li>
-                <li>
+               
+                  </>
+                }
+                 <li>
                   <Link to="/">
                     <FaHome
                     />
@@ -112,6 +109,7 @@ const SideBar = () => {
                     </span>
                   </Link>
                 </li>
+              
               </ul>
             </div>
           </div>

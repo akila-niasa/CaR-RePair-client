@@ -5,6 +5,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading/Loading';
+import useTooken from '../../hooks/useToken';
 const Login = () => {
     const navigate = useNavigate();
     let location = useLocation();
@@ -13,13 +14,15 @@ const Login = () => {
    
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
 
+    const [token] = useTooken( guser)
+
     useEffect(() => {
-        if (guser) {
+        if (token) {
             navigate(from, { replace: true });
 
 
         }
-    }, [from,guser,navigate])
+    }, [token, from, navigate])
     
     if (gloading) {
         return <Loading />

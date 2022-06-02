@@ -96,11 +96,7 @@ const OrderList = () => {
                 
                   <td>{order?.price}</td>
 
-                  <td>{(order?.price && !order?.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn-small btn-success'>pay</button></Link>}
-                    {(order.price && order.paid) && <div>
-                      <p><span className='text-green-500'>Paid</span></p>
-                      <p>Transaction id: <span className='text-success'>{order.transactionId}</span></p>
-                    </div>}
+                  <td>{order?.status}
                   </td>
 
                   <td>
