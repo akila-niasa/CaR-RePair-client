@@ -75,11 +75,7 @@ const OrderProcess = () => {
                             <input type="submit" className="fw-bold text-white text-uppercase" />
                         </form> 
                     </div>
-                    <div>
-                        <p className="tex-danger pt-4">Payment</p>
-                       
-                   <Payment/>
-                    </div>
+                   
                 </div>
             </div>
         </div>

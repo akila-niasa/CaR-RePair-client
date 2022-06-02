@@ -68,7 +68,7 @@ const OrderList = () => {
                 </div>
       <div className='mb-3 my-5 mt-6 mx-5'>
         <h2 className='mb-2 text-xl'>
-          My <span className='text-secondary'>Orders:{totalOrders.length}</span>
+          My <span className='text-danger'>Orders:{totalOrders.length}</span>
         </h2>
         <hr />
       </div>
@@ -96,7 +96,11 @@ const OrderList = () => {
                 
                   <td>{order?.price}</td>
 
-                  <td>{order?.status}
+                  <td>{(order?.price && !order?.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                    {(order.price && order.paid) && <div>
+                      <p><span className='text-green-500'>Paid</span></p>
+                      <p>Transaction id: <span className='text-success'>{order.transactionId}</span></p>
+                    </div>}
                   </td>
 
                   <td>

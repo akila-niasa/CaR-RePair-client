@@ -16,7 +16,7 @@ const SideBar = () => {
             <div className="sidebar-brand">
               <h2>
                 <span>
-                  <FaFolderPlus />
+                <img src='https://i.ibb.co/8ND4ySN/images.png' alt="" className='w-25'/>
                 </span>
             
               </h2>

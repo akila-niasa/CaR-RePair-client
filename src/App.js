@@ -22,55 +22,60 @@ import MyProfile from './components/DashBoard/Dashboard/MyProfile/MyProfile';
 function App() {
   return (
     <div className="App">
-     
-     <Routes>
-       <Route path='/' element={<Home/>}/>
-       <Route path='order/:id' element={
-       <RequireAuth>
-          <OrderProcess/>
-       </RequireAuth>
-       }/>
-       <Route path='dashboard' element={<RequireAuth>
-        <DashBoard/>
-       </RequireAuth>}>
-    
-       <Route path='profile' element={<RequireAuth>
-        <MyProfile/>
-       </RequireAuth>}/>
-       
-       <Route path='customerorder' element={
-        <OrderList/>
-       }/>
-       <Route path='pay' element={
-        <Payment/>
-       }/>
-       <Route path='review' element={
-        <Review/>
-      }/>
-       <Route path='admin' element={
-        <RequireAdmin>
-        <MakeAdmin/>
-        </RequireAdmin>
-      }/>
-       <Route path='orderlist' element={
-        <RequireAdmin>
-        <AllOrders/>
-        </RequireAdmin>
-      }/>
-       <Route path='addservices' element={
-        <RequireAdmin>
-        <AddServices/>
-        </RequireAdmin>
-      }/>
-       <Route path='manageservice' element={
-        <RequireAdmin>
-        <ManageService/>
-        </RequireAdmin>
-      }/>
-       </Route>
-       <Route path='login' element={<Login/>}/>
-     </Routes>
-     <Toaster/>
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='order/:id' element={
+          <RequireAuth>
+            <OrderProcess />
+          </RequireAuth>
+        } />
+
+        <Route path='dashboard' element={<RequireAuth>
+          <DashBoard />
+        </RequireAuth>}>
+
+          <Route path='profile' element={<RequireAuth>
+            <MyProfile />
+          </RequireAuth>} />
+
+          <Route path='customerorder' element={
+            <OrderList />
+          } />
+
+          <Route path='payment/:id' element={
+
+            <Payment />
+
+          } />
+
+          <Route path='review' element={
+            <Review />
+          } />
+          <Route path='admin' element={
+            <RequireAdmin>
+              <MakeAdmin />
+            </RequireAdmin>
+          } />
+          <Route path='orderlist' element={
+            <RequireAdmin>
+              <AllOrders />
+            </RequireAdmin>
+          } />
+          <Route path='addservices' element={
+            <RequireAdmin>
+              <AddServices />
+            </RequireAdmin>
+          } />
+          <Route path='manageservice' element={
+            <RequireAdmin>
+              <ManageService />
+            </RequireAdmin>
+          } />
+        </Route>
+        <Route path='login' element={<Login />} />
+      </Routes>
+      <Toaster />
     </div>
   );
 }

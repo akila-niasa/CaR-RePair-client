@@ -41,6 +41,8 @@ function AllOrders() {
               <th>Product</th>
               <th>Price</th>
               <th>Customer</th>
+              <th>Payment</th>
+              <th>Status</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -51,11 +53,14 @@ function AllOrders() {
                   <td>{order?.productName}</td>
                   <td>{order?.price}</td>
                   <td>{order?.user}</td>
+                  <td>{order?.paid?'paid':'not paid'}</td>
+                  <td>{order?.status}</td>
                   <td>
                     <StatusForm
                       orderId={order._id}
                       setUpdated={setUpdated}
                       status={order?.status}
+                      paid={order?.paid}
                     ></StatusForm>
                   </td>
                 </tr>
