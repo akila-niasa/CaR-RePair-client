@@ -19,7 +19,7 @@ const MyProfile = () => {  const[user]=useAuthState(auth)
     const [shipped, setShipped] = useState(0);
     useEffect(() => {
       axios
-        .get("http://localhost:5000/order")
+        .get("https://safe-island-12577.herokuapp.com/order")
         .then(function (response) {
           setOrders(response.data);
           for (let data of response.data) {
@@ -51,7 +51,7 @@ const MyProfile = () => {  const[user]=useAuthState(auth)
     useEffect(() => {
       axios
         .get(
-          `http://localhost:5000/orders?email=${user.email}`
+          `https://safe-island-12577.herokuapp.com/orders?email=${user.email}`
         )
         .then(function (response) {
           setTotalOrders(response.data);

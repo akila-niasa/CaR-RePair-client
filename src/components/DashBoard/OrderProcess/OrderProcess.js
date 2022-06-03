@@ -29,7 +29,7 @@ const OrderProcess = () => {
         };
         axios
           .post(
-            "http://localhost:5000/saveorder",
+            "https://safe-island-12577.herokuapp.com/saveorder",
             orderDetails
           )
           .then(function (response) {
@@ -45,7 +45,7 @@ const OrderProcess = () => {
     
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/service/${id}`)
+      .get(`https://safe-island-12577.herokuapp.com/service/${id}`)
       .then(function (response) {
         setProduct(response.data);
       })

@@ -15,7 +15,7 @@ const AddServices = () => {
             price:data.price,
             textArea: data.textArea
         };
-        const url = `http://localhost:5000/addService`;
+        const url = `https://safe-island-12577.herokuapp.com/addService`;
         console.log(servicebookData);
         fetch(url,{
             method: 'POST',

@@ -13,7 +13,7 @@ function StatusForm({ orderId, setUpdated, status, paid }) {
     const onChange = (data) => {
         axios
             .put(
-                `http://localhost:5000/order/${orderId}`,
+                `https://safe-island-12577.herokuapp.com/order/${orderId}`,
                 data
             )
             .then(function (response) {

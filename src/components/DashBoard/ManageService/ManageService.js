@@ -5,13 +5,13 @@ import { FaTrashAlt, } from 'react-icons/fa';
 const ManageService = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/service")
+    fetch("https://safe-island-12577.herokuapp.com/service")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [services]);
   const specificDeleteBook = (id) => {
    
-    fetch(`http://localhost:5000/deleteproduct/${id}`, {
+    fetch(`https://safe-island-12577.herokuapp.com/deleteproduct/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

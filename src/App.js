@@ -18,6 +18,7 @@ import Payment from './components/DashBoard/Payment/Payment';
 import AddServices from './components/DashBoard/AddServices/AddServices';
 import ManageService from './components/DashBoard/ManageService/ManageService';
 import MyProfile from './components/DashBoard/Dashboard/MyProfile/MyProfile';
+import NotFound from './components/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
           } />
         </Route>
         <Route path='login' element={<Login />} />
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Toaster />
     </div>

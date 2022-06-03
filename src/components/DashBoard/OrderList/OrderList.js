@@ -22,7 +22,7 @@ const OrderList = () => {
     useEffect(() => {
         axios
           .get(
-            `http://localhost:5000/orders?email=${user.email}`
+            `https://safe-island-12577.herokuapp.com/orders?email=${user.email}`
           )
           .then(function (response) {
             setTotalOrders(response.data);
@@ -45,7 +45,7 @@ const OrderList = () => {
       const orderDelete = id => {
         const processed = window.confirm("Do you want to delete the product?")
         if (processed) {
-          fetch(`http://localhost:5000/deleteorder/${id}`, {
+          fetch(`https://safe-island-12577.herokuapp.com/deleteorder/${id}`, {
             method: "DELETE"
           })
             .then(res => res.json())

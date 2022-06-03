@@ -4,7 +4,7 @@ import CustomerReviewsDetail from './CustomerReviewsDetail';
 const CustomerReview = () => {
     const [feedbacks, setFeedbacks] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/userfeedback')
+        fetch('https://safe-island-12577.herokuapp.com/userfeedback')
         .then(res => res.json())
         .then(data =>setFeedbacks(data))
     },[])

@@ -7,7 +7,7 @@ import AdminRow from './AdminRow';
 
 const MakeAdmin = () => {
     const { isLoading, error, data: users, refetch } = useQuery('users', () =>
-        fetch('http://localhost:5000/user', {
+        fetch('https://safe-island-12577.herokuapp.com/user', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

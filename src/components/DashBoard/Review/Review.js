@@ -18,7 +18,7 @@ const Review = () => {
             // price:data.price,
             // textArea: data.textArea
         };
-        const url = `http://localhost:5000/userFeedbackInfo`;
+        const url = `https://safe-island-12577.herokuapp.com/userFeedbackInfo`;
         console.log(userFeedbackInfo);
         fetch(url,{
             method: 'POST',

@@ -11,7 +11,7 @@ function AllOrders() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/order")
+      .get("https://safe-island-12577.herokuapp.com/order")
       .then(function (response) {
         setOrders(response.data);
       })
